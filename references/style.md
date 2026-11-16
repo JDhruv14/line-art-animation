@@ -66,4 +66,4 @@ palette with `nightTint()`, and ink becomes pale — see `scenes.md`.
 Day: dark ink on warm paper, soft gradient sky. Night: the drawing inverts — pale ink
 on indigo paper — and light comes from the windows, lanterns, a street lamp, a bike
 lamp, fireflies, each with a warm radial glow on a `mix-blend-mode: screen` layer. The
-moon is a pale crescent, stars twinkle. This inversion is why ink is `currentColor`.
+moon is a pale crescent; stars twinkle. This inversion is why ink is `currentColor`.
