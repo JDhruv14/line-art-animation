@@ -45,7 +45,7 @@ the legs through springs, sleeves and bags hang on springs/pendulums.
 ## Things that roll or push
 
 - **Wheels** roll without slipping: angle = distance / radius. Cranks turn at a
-  gear ratio of the wheel angle; feet sit on the pedals; legs are IK to the pedals.
+  gear ratio of the wheel angle; feet sit on the pedals; legs are IK'd to the pedals.
 - **Poling a boat**: plant the pole tip at a fixed world point, let the boat surge
   while the tip stays put (the pole leans back), lift it out, swing it forward. The
   boat's speed follows the push, not a constant.
