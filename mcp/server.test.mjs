@@ -24,16 +24,18 @@ test('stdio client can discover and read kit files from outside the installation
       request(3, 'tools/call', { name: 'list_kit_files' }),
       request(4, 'tools/call', { name: 'read_kit_file', arguments: { path: 'lib/gait.ts' } }),
       request(5, 'tools/call', { name: 'read_kit_file', arguments: { path: '../.git/config' } }),
+      request(6, 'tools/call', { name: 'read_kit_file', arguments: { path: 'skills/line-art-animation/SKILL.md' } }),
     ].map(JSON.stringify).join('\n') + '\n',
   });
   assert.equal(status, 0, stderr);
   const replies = stdout.trim().split('\n').map(JSON.parse);
-  assert.deepEqual(replies.map(({ id }) => id), [1, 2, 3, 4, 5]);
+  assert.deepEqual(replies.map(({ id }) => id), [1, 2, 3, 4, 5, 6]);
   assert.equal(replies[0].result.protocolVersion, '2025-06-18');
   assert.deepEqual(replies[1].result.tools.map(({ name }) => name), ['list_kit_files', 'read_kit_file']);
   assert.match(replies[2].result.content[0].text, /scripts\/capture\.ts/);
   assert.match(replies[3].result.content[0].text, /export function gait\(/);
   assert.equal(replies[4].result.isError, true);
+  assert.match(replies[5].result.content[0].text, /## Workflow/);
 });
 
 test('plugin manifests launch the same server from a client working directory', () => {

@@ -6,6 +6,7 @@ const root = new URL('../', import.meta.url);
 const { name, version } = JSON.parse(readFileSync(new URL('package.json', root), 'utf8'));
 const files = [
   'README.md', 'LICENSE', 'package.json', 'tsconfig.json', 'vite.config.ts', 'index.html',
+  'SKILL.md', 'skills/line-art-animation/SKILL.md',
   ...['references', 'lib', 'examples/walker', 'examples/village', 'scripts'].flatMap((directory) =>
     readdirSync(new URL(directory, root), { withFileTypes: true })
       .filter((entry) => entry.isFile() && /\.(md|ts|html|json|sh)$/.test(entry.name))
