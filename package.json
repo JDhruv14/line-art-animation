@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "A Claude skill and small TypeScript library for animated line-art SVG components.",
+  "description": "Agent plugin and TypeScript library for animated line-art SVG components.",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

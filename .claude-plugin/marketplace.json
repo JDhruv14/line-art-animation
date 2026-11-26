@@ -1,0 +1,15 @@
+{
+  "name": "line-art-animation-kit",
+  "owner": {
+    "name": "JDhruv14"
+  },
+  "plugins": [
+    {
+      "name": "line-art-animation",
+      "source": "./"
+    }
+  ],
+  "metadata": {
+    "description": "SVG line-art animation skill and TypeScript kit."
+  }
+}

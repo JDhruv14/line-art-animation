@@ -1,0 +1,28 @@
+{
+  "name": "line-art-animation",
+  "version": "0.1.0",
+  "description": "Build, inspect, and render ink-on-paper SVG animations with a TypeScript kit.",
+  "author": {
+    "name": "JDhruv14"
+  },
+  "repository": "https://github.com/sealad886/line-art-animation",
+  "license": "MIT",
+  "keywords": [
+    "animation",
+    "svg",
+    "typescript",
+    "line-art"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "interface": {
+    "displayName": "Line-Art Animation",
+    "shortDescription": "Animate ink-on-paper scenes",
+    "longDescription": "Build interactive SVG figures and scenes, verify their motion, and export video. Includes TypeScript modules, runnable examples, and a local server for reading the bundled kit.",
+    "developerName": "JDhruv14",
+    "category": "Creativity",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": "Build a looping line-art SVG scene with a bakery opening at dawn."
+  }
+}
