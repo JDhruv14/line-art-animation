@@ -86,7 +86,7 @@ against a reference. These were all rejected in practice, and each has a rule be
 | `lib/ink.ts` | `pen` `shape` `blot` `paint` `limb` `solid` `joint` `hang` `curve` `shoe` `place` `toScene` `inkDefs` `run` |
 | `lib/gait.ts` | `gait({ kind: 'walk' \| 'shuffle' \| 'run', …overrides })` → `{ speed, period, pose(phase, go) }` |
 | `lib/motion.ts` | `spring` `pendulum` `pointerWind` `sequence` `seeded` `wobble` `ease` `minJerk` … |
-| `lib/daynight.ts` | `palette(τ)` → sky, paper, ink, `lamp`, `night`, `sunset`; `applyPalette` `nightTint` |
+| `lib/daynight.ts` | `palette(τ)` → `top` and `bottom` sky colors, `paper`, `ink`, `inkT`, `lamp`, `night`, `sunset`; `applyPalette` `nightTint` |
 
 `run(draw)` drives everything with `draw(t, dt)`. Two URL flags matter for checking:
 `?t=1.25` freezes time; `?debug` disables rAF and exposes `window.__step(seconds)`
@@ -98,5 +98,7 @@ for exact stepping (background and headless tabs throttle rAF, so always verify 
 - `scripts/clip.ts period|blobs …` — loop length of a region; dark-blob tracking per frame
 - `scripts/frames.sh <clip> x y w h outDir` — grid-overlaid frames for reading poses off a clip
 
-All run with Node ≥ 22.18 (TypeScript is stripped natively) plus ffmpeg; `capture.ts`
-finds a local Chrome/Chromium or uses `$CHROME`.
+`capture.ts` and `clip.ts` need Node ≥ 22.18. Capture uses Chrome or Chromium
+and accepts a browser path in `$CHROME`. Clip analysis needs FFmpeg.
+`frames.sh` needs Bash and FFmpeg. The video workflow also uses FFmpeg to encode
+the captured frames.

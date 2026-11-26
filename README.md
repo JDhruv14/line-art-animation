@@ -24,9 +24,10 @@ pointer.
 
 ## Install the plugin
 
-Clone or download this repository. Run the commands below from the checkout root,
-or replace `"$PWD"` with its absolute path. Node 22.18 or newer must be on the
-agent client's PATH. The skill and MCP server work without `npm install`.
+Clone this repository, or download it for clients other than Cursor. Run the
+commands below from the repository root, or replace `"$PWD"` with its absolute
+path. Node 22.18 or newer must be on the agent client's PATH. The skill and MCP
+server work without `npm install`.
 
 | Client | Local installation |
 |---|---|
@@ -37,8 +38,9 @@ agent client's PATH. The skill and MCP server work without `npm install`.
 | Cursor | Use the Cursor-native copy below, then reload Cursor and open **Customize**. Local plugin imports must be enabled. |
 | Gemini CLI | Run `gemini extensions install "$PWD"` and restart Gemini CLI. |
 
-Cursor uses its own MCP path variables. To install the Cursor-native variant in a
-fresh local plugin folder, omit the two portable manifest files from the copy:
+Cursor uses its own MCP path variables. Run the following from a Git clone of
+this repository. The archive omits the portable manifests so Cursor loads its
+native configuration.
 
 ```sh
 cursor_plugin="$HOME/.cursor/plugins/local/line-art-animation"
@@ -145,7 +147,7 @@ ffmpeg -framerate 30 -i captures/village/f%04d.png -c:v libx264 -preset slow -cr
 The capture script drives headless Chrome over the DevTools protocol, with no npm
 dependencies, and advances the scene by exactly one frame between screenshots, so the
 result doesn't depend on machine speed. It finds a local Chrome or Chromium, or uses
-`$CHROME`. Needs ffmpeg.
+`$CHROME`. The video encoding step uses FFmpeg.
 
 ## Match a reference clip
 
