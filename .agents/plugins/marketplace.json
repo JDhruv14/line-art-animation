@@ -1,0 +1,20 @@
+{
+  "name": "line-art-animation-kit",
+  "interface": {
+    "displayName": "Line-Art Animation Kit"
+  },
+  "plugins": [
+    {
+      "name": "line-art-animation",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

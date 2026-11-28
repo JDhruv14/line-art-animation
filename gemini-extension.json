@@ -1,0 +1,13 @@
+{
+  "name": "line-art-animation",
+  "version": "0.1.0",
+  "description": "Build, inspect, and render ink-on-paper SVG animations with a TypeScript kit.",
+  "mcpServers": {
+    "line-art-animation": {
+      "command": "node",
+      "args": [
+        "${extensionPath}/mcp/server.mjs"
+      ]
+    }
+  }
+}

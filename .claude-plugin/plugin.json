@@ -1,0 +1,16 @@
+{
+  "name": "line-art-animation",
+  "version": "0.1.0",
+  "description": "Build, inspect, and render ink-on-paper SVG animations with a TypeScript kit.",
+  "author": {
+    "name": "JDhruv14"
+  },
+  "repository": "https://github.com/JDhruv14/line-art-animation",
+  "license": "MIT",
+  "keywords": [
+    "animation",
+    "svg",
+    "typescript",
+    "line-art"
+  ]
+}
